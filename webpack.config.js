@@ -19,11 +19,13 @@ module.exports = {
   // dev
   devServer: {
     // root
-    contentBase: './dist',
+    static: {
+      directory: './dist',
+      watch: true
+    },
     port: 3000,
     // launch
     open: false,
-    watchContentBase: true,
     // other
     historyApiFallback: true,
     proxy: {
