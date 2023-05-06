@@ -1,4 +1,4 @@
-import {Box} from "@material-ui/core";
+import {Box} from "@mui/material";
 import styled, {css} from "styled-components";
 import {theme} from "../../theme";
 import {ChatBody} from "../../page/chat/Chat";
