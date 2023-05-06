@@ -3,10 +3,10 @@ import React from "react";
 import {SignIn} from "./page/chat/SignIn";
 import {Chat} from "./page/chat/Chat";
 import {Box, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
-import {AddCircle, Home} from "@material-ui/icons";
+import {AddCircle, Home} from "@mui/icons-material";
 import {Calc} from "./page/calc/Calc";
 import styled from "styled-components";
-import ChatIcon from '@material-ui/icons/Chat';
+import ChatIcon from '@mui/icons-material/Chat';
 import Error from "./Error"
 import {NavLinkActive} from "./shared/NavLinkActive";
 
@@ -16,7 +16,7 @@ const App = () =>
       <SideBar>
         <List>
           <NavLinkActive to='/calc/top'>
-            <ListItem button>
+            <ListItem>
               <ListItemIcon>
                 <Home/>
               </ListItemIcon>
@@ -24,7 +24,7 @@ const App = () =>
             </ListItem>
           </NavLinkActive>
           <NavLinkActive to='/chat/start'>
-            <ListItem button>
+            <ListItem>
               <ListItemIcon>
                 <ChatIcon/>
               </ListItemIcon>
@@ -32,7 +32,7 @@ const App = () =>
             </ListItem>
           </NavLinkActive>
           <NavLinkActive to='/calc/exView'>
-            <ListItem button>
+            <ListItem>
               <ListItemIcon>
                 <AddCircle/>
               </ListItemIcon>
