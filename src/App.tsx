@@ -1,4 +1,4 @@
-import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from "react";
 import {SignIn} from "./page/chat/SignIn";
 import {Chat} from "./page/chat/Chat";
@@ -7,7 +7,6 @@ import {AddCircle, Home} from "@material-ui/icons";
 import {Calc} from "./page/calc/Calc";
 import styled from "styled-components";
 import ChatIcon from '@material-ui/icons/Chat';
-import {theme} from "./theme";
 import Error from "./Error"
 import {NavLinkActive} from "./shared/NavLinkActive";
 
@@ -56,11 +55,6 @@ const App = () =>
       </Contents>
     </Container>
   </BrowserRouter>
-
-const menuHighlight = {
-  color: theme.palette.text.hint,
-  fontWeight: 'bold',
-}
 
 const Container = styled(Box)`
   display: flex;

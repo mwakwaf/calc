@@ -10,8 +10,7 @@ export const NavLinkActive = ({to, children}: Props) => {
   return (
     <NavLink
       to={to}
-      className={({isActive, isPending}) =>
-        isPending ? "pending" : isActive ? "active" : ""}
+      className={isActive => isActive ? "active" : ""}
       children={children}
     ></NavLink>
   )
