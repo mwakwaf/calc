@@ -1,3 +1,13 @@
+## 導入
+
+```
+brew install nvm #nvmインストール
+nvm use #nvmrcで指定されたバージョンのnodeをインストール
+npm install -g yarn #nodeバージョンに紐づいたyarnをインストール
+yarn #依存関係をインストール
+yarn start #起動
+```
+
 ## package.json構成
 
 - html-webpack-plugin
