@@ -4,7 +4,7 @@
 
 ```sh
 brew install nvm #nvmインストール
-nvm use #nvmrcで指定されたバージョンのnodeをインストール
+nvm use #.nvmrcで指定されたバージョンのnodeをインストール
 npm install -g yarn #nodeバージョンに紐づいたyarnをインストール
 yarn #依存関係をインストール
 yarn start #起動
