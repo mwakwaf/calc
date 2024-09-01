@@ -5,10 +5,6 @@ import {useState} from "react";
 import {useWebSocket} from "../../hooks/useWebSocket";
 import {ChatList} from "../../app/chat/ChatList";
 
-interface Props {
-  userName: string
-}
-
 export type ChatBody = {
   text: string
   from: string
@@ -16,7 +12,7 @@ export type ChatBody = {
 }
 
 export const Chat = () => {
-  const {userName} = useParams<Props>()
+  const {userName} = useParams() as { userName: string }
   const [items, setItems] = useState<ChatBody[]>([{text: `${userName}さん、こんにちは`, from: "管理人", mine: false}])
   const [text, setText] = useState<string>('')
   const socket = useWebSocket<ChatBody>(

@@ -1,4 +1,4 @@
-import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
+import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 import React from "react";
 import {SignIn} from "./page/chat/SignIn";
 import {Chat} from "./page/chat/Chat";
@@ -9,49 +9,50 @@ import styled from "styled-components";
 import ChatIcon from '@material-ui/icons/Chat';
 import {theme} from "./theme";
 import Error from "./Error"
+import {NavLinkActive} from "./shared/NavLinkActive";
 
 const App = () =>
   <BrowserRouter>
     <Container>
       <SideBar>
         <List>
-          <NavLink to='/calc/top' activeStyle={menuHighlight}>
+          <NavLinkActive to='/calc/top'>
             <ListItem button>
               <ListItemIcon>
                 <Home/>
               </ListItemIcon>
               <ListItemText primary='計算'/>
             </ListItem>
-          </NavLink>
-          <NavLink to='/chat/start' activeStyle={menuHighlight}>
+          </NavLinkActive>
+          <NavLinkActive to='/chat/start'>
             <ListItem button>
               <ListItemIcon>
                 <ChatIcon/>
               </ListItemIcon>
               <ListItemText primary='チャット'/>
             </ListItem>
-          </NavLink>
-          <NavLink to='/calc/exView' activeStyle={menuHighlight}>
+          </NavLinkActive>
+          <NavLinkActive to='/calc/exView'>
             <ListItem button>
               <ListItemIcon>
                 <AddCircle/>
               </ListItemIcon>
               <ListItemText primary='exView'/>
             </ListItem>
-          </NavLink>
+          </NavLinkActive>
         </List>
       </SideBar>
       <Contents>
-        <Switch>
+        <Routes>
           {/*calc*/}
-          <Route exact path='/' component={Calc}/>
-          <Route path='/calc/top' component={Calc}/>
+          <Route path='/' element={<Calc/>}/>
+          <Route path='/calc/top' element={<Calc/>}/>
           {/*chat*/}
-          <Route path='/chat/start' component={SignIn}/>
-          <Route path='/chat/room/:userName' component={Chat}/>
+          <Route path='/chat/start' element={<SignIn/>}/>
+          <Route path='/chat/room/:userName' element={<Chat/>}/>
           {/*other*/}
-          <Route component={Error}/>
-        </Switch>
+          <Route path='/*' element={<Error/>}/>
+        </Routes>
       </Contents>
     </Container>
   </BrowserRouter>
