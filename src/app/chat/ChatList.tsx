@@ -11,5 +11,6 @@ export const ChatList = ({items}: Props) => {
     <List>
       {items.map((item, i) =>
         <ChatItem item={item} key={i}/>)}
-    </List>)
+    </List>
+  )
 }
