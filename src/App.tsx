@@ -2,7 +2,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from "react";
 import {SignIn} from "./page/chat/SignIn";
 import {Chat} from "./page/chat/Chat";
-import {Box, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
+import {Box, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
 import {AddCircle, Home} from "@material-ui/icons";
 import {Calc} from "./page/calc/Calc";
 import styled from "styled-components";

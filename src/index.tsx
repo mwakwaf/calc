@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client'
 import {theme} from "./theme";
 import {createGlobalStyle, ThemeProvider as StyledThemeProvider} from 'styled-components'
 import {ThemeProvider as MuiThemeProvider} from '@material-ui/core/styles'
-import {StylesProvider} from "@material-ui/core";
+import {StylesProvider} from "@mui/material";
 import App from "./App";
 
 const GlobalStyle = createGlobalStyle`

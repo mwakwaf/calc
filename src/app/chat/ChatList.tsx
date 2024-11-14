@@ -1,5 +1,5 @@
 import {ChatItem} from "./ChatItem";
-import {List} from "@material-ui/core";
+import {List} from "@mui/material";
 import {ChatBody} from "../../page/chat/Chat";
 
 interface Props {
