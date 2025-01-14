@@ -1,17 +1,11 @@
 import {NavLink} from "react-router-dom";
 import * as React from "react";
+import styled from "styled-components";
+import {theme} from "../theme";
 
-interface Props {
-  to: string,
-  children: React.ReactNode
-}
-
-export const NavLinkActive = ({to, children}: Props) => {
-  return (
-    <NavLink
-      to={to}
-      className={isActive => isActive ? "active" : ""}
-      children={children}
-    ></NavLink>
-  )
-}
+export const NavLinkActive = styled(NavLink)`
+  &.active {
+    color: ${theme.palette.primary.light};
+    font-weight: bold;
+  }
+`
