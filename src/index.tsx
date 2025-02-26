@@ -15,12 +15,12 @@ const GlobalStyle = createGlobalStyle`
 const container: HTMLElement = document.getElementById('root')!
 createRoot(container).render(
   <React.StrictMode>
-    <GlobalStyle/>
+    {/*<GlobalStyle/>*/}
     <StyledEngineProvider injectFirst>
       <MuiThemeProvider theme={theme}>
-        <StyledThemeProvider theme={theme}>
+        {/*<StyledThemeProvider theme={theme}>*/}
           <App/>
-        </StyledThemeProvider>
+        {/*</StyledThemeProvider>*/}
       </MuiThemeProvider>
     </StyledEngineProvider>
   </React.StrictMode>
